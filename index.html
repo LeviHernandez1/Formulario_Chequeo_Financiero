@@ -3,9 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>CHEQUEO FINANCIERO</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Chequeo financiero con visión de futuro</h1>
+    <p>Conoce tu nivel de bienestar financiero y qué tanto estás preparado para construir tu futuro económico.</p>
     
+    <form action="#" method="post" class="formulario-container">
+            <!-- Datos personales -->
+            <div id="seccion1"> 
+                <label for="nombres">Nombre(s):</label>
+                <input type="text" id="nombres" name="nombres" required><br><br>
+
+                <label for="aPaterno">Apellido Paterno:</label>
+                <input type="text" id="aPaterno" name="aPaterno" required><br><br>
+
+                <label for="aMaterno">Apellido Materno:</label>
+                <input type="text" id="aMaterno" name="aMaterno"><br><br>
+
+                <!-- Correo Electronico -->
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" email="correo"><br><br>
+                
+                <!-- Genero -->
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">--Selecciona una opción--</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="no_decir">Prefiero no decirlo</option>
+                </select><br><br>
+
+                <!-- Fecha de nacimienti -->
+                <label for="f_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="f_nacimiento" name="f_nacimiento" required><br><br>
+
+                <button type="button" onclick="mostrarPreguntas()">Continuar</button>
+            </div>
+
+            <!-- Seccion de encuesta -->
+            <div id="seccion2" style="display: none;">
+                <!-- Pregunta 1-->
+                <label for="q1">1. ¿Estoy asegurando mi futuro financiero?</label><br>
+                <select id="q1" name="q1" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+                
+                <!-- Pregunta 2-->
+                <label for="q2">2. Conozco qué es la cuenta Afore y que será parte de mi retiro.</label><br>
+                <select id="q2" name="q2" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 3-->
+                <label for="q3">3. El dinero que manejo me permite disfrutar mi vida sin preocupaciones constantes.</label><br>
+                <select id="q3" name="q3" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 4-->
+                <label for="q4">4. Comprendo que en las inversiones existe una relación entre riesgo y redimineto.</label><br>
+                <select id="q4" name="q4" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 5-->
+                <label for="q5">5. Sé que desde mi primer empleo formal tendré una cuenta AFORE.</label><br>
+                <select id="q5" name="q5" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 6-->
+                <label for="q6">6. Me sobra dinero al final del mes y lo ahorro.</label><br>
+                <select id="q6" name="q6" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 7-->
+                <label for="q7">7. Ahorro con regularidad para metas futuras.</label><br>
+                <select id="q7" name="q7" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 8-->
+                <label for="q8">8. Confío en las instituciones que manejan mis recursos, como la AFORE o los bancos.</label><br>
+                <select id="q8" name="q8" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 9-->
+                <label for="q9">9. Entiendo cómo funciona el interés compuesto.</label><br>
+                <select id="q9" name="q9" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <!-- Pregunta 10-->
+                <label for="q10">10. Estoy tomando desiciones que me ayudarán a tener una vida financiera estable.</label><br>
+                <select id="q10" name="q10" required>
+                <option value=""> -- Que me identifica --</option>
+                <option value="4">Totalmete</option>
+                <option value="3">Muy bien</option>
+                <option value="2">En cierta medida</option>
+                <option value="1">Muy poco</option>
+                <option value="0">No me describe</option>
+                </select><br><br>
+
+                <button type="submit">Enviar Respuestas</button>
+            </div>
+
+            <!-- Seccion de Resultados -->
+             <div>
+
+             </div>
+        </form>
+        
+    <footer class="piePagina">
+        <img src="img/gob.jpg" alt="Pie de pagina" class="imagen-pie">
+    </footer>
+
+    <script>
+        function mostrarPreguntas(){
+            const nombres = document.getElementById("nombres").value.trim();
+            const aPaterno = document.getElementById("aPaterno").value.trim();
+            const aMaterno = document.getElementById("aMaterno").value.trim();
+            const correo = document.getElementById("correo").value.trim();
+            const genero = document.getElementById("genero").value;
+            const f_nacimiento = document.getElementById("f_nacimiento").value;
+
+            // Validar que no se encuentren vacios 
+            if (nombres && aPaterno && aMaterno && correo && genero && f_nacimiento){
+                document.getElementById("seccion1").style.display = "none";
+                document.getElementById("seccion2").style.display = "block";
+            } else{
+                alert("Por favor completa todos los campos antes de continuar")
+            }
+        }
+    </script>
 </body>
 </html>
