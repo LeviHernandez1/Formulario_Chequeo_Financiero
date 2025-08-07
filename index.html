@@ -167,23 +167,7 @@
         <img src="img/gob.jpg" alt="Pie de pagina" class="imagen-pie">
     </footer>
 
-    <script>
-        function mostrarPreguntas(){
-            const nombres = document.getElementById("nombres").value.trim();
-            const aPaterno = document.getElementById("aPaterno").value.trim();
-            const aMaterno = document.getElementById("aMaterno").value.trim();
-            const correo = document.getElementById("correo").value.trim();
-            const genero = document.getElementById("genero").value;
-            const f_nacimiento = document.getElementById("f_nacimiento").value;
+    <script src="script.js"></script>
 
-            // Validar que no se encuentren vacios 
-            if (nombres && aPaterno && aMaterno && correo && genero && f_nacimiento){
-                document.getElementById("seccion1").style.display = "none";
-                document.getElementById("seccion2").style.display = "block";
-            } else{
-                alert("Por favor completa todos los campos antes de continuar")
-            }
-        }
-    </script>
 </body>
 </html>
